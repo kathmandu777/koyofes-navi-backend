@@ -12,7 +12,9 @@ from .base import BaseModelMixin
 class ExhibitManager(BaseUserManager):
     use_in_migrations = True
 
-    def _create_exhibit(self, name, password, **extra_fields):
+    def _create_exhibit(
+        self, name: str, password: str | None, **extra_fields
+    ) -> "Exhibit":
         if not name:
             raise ValueError("The given name must be set")
         exhibit = self.model(name=name, **extra_fields)
@@ -20,12 +22,16 @@ class ExhibitManager(BaseUserManager):
         exhibit.save(using=self._db)
         return exhibit
 
-    def create_user(self, name, password=None, **extra_fields):
+    def create_user(
+        self, name: str, password: str | None = None, **extra_fields
+    ) -> "Exhibit":
         extra_fields.setdefault("is_staff", False)
         extra_fields.setdefault("is_superuser", False)
         return self._create_exhibit(name, password, **extra_fields)
 
-    def create_superuser(self, name, password=None, **extra_fields):
+    def create_superuser(
+        self, name: str, password: str | None = None, **extra_fields
+    ) -> "Exhibit":
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
 

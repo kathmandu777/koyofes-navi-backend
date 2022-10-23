@@ -1,9 +1,10 @@
 from config.jwt import create_claims, encode_claims_to_jwt_token, response_jwt_token
 from config.password import verify_password
-from timemanager.models import Exhibit
-from timemanager.schemas.auth import LoginSchema
 
 from fastapi import HTTPException, Request
+
+from ..models import Exhibit
+from ..schemas import LoginSchema
 
 
 class AuthAPI:

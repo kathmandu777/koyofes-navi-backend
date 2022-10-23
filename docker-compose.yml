@@ -15,8 +15,8 @@ services:
       DB_HOST: postgres
       DB_PORT: 5432
       ENV_STATE: local
-    # env_file:
-    #   - fastapi/fastapi.env
+    env_file:
+      - fastapi/fastapi.env
     links:
       - postgres
     command: ./scripts/runserver.sh

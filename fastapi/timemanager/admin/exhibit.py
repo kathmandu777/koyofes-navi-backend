@@ -67,7 +67,7 @@ class ExhibitAdmin(admin.ModelAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
     change_password_form = AdminPasswordChangeForm
-    list_display = ("name",)
+    list_display = ("name", "last_login", "description")
     list_filter = (
         "is_staff",
         "is_superuser",
@@ -81,12 +81,12 @@ class ExhibitAdmin(admin.ModelAdmin):
     )
     readonly_fields = ("created_at", "uuid")
 
-    def get_fieldsets(self, request, obj=None):
+    def get_fieldsets(self, request, obj=None):  # type: ignore
         if not obj:
             return self.add_fieldsets
         return super(ExhibitAdmin, self).get_fieldsets(request, obj)
 
-    def get_form(self, request, obj=None, **kwargs):
+    def get_form(self, request, obj=None, **kwargs):  # type: ignore
         """Use special form during user creation."""
         defaults = {}
         if obj is None:
@@ -94,7 +94,7 @@ class ExhibitAdmin(admin.ModelAdmin):
         defaults.update(kwargs)
         return super().get_form(request, obj, **defaults)
 
-    def get_urls(self):
+    def get_urls(self):  # type: ignore
         return [
             path(
                 "<id>/password/",
@@ -102,7 +102,7 @@ class ExhibitAdmin(admin.ModelAdmin):
             ),
         ] + super().get_urls()
 
-    def lookup_allowed(self, lookup, value):
+    def lookup_allowed(self, lookup, value):  # type: ignore
         # Don't allow lookups involving passwords.
         return not lookup.startswith("password") and super().lookup_allowed(
             lookup, value
@@ -110,11 +110,11 @@ class ExhibitAdmin(admin.ModelAdmin):
 
     @sensitive_post_parameters_m
     @csrf_protect_m
-    def add_view(self, request, form_url="", extra_context=None):
+    def add_view(self, request, form_url="", extra_context=None):  # type: ignore
         with transaction.atomic(using=router.db_for_write(self.model)):
             return self._add_view(request, form_url, extra_context)
 
-    def _add_view(self, request, form_url="", extra_context=None):
+    def _add_view(self, request, form_url="", extra_context=None):  # type: ignore
         # It's an error for a user to have add permission but NOT change
         # permission for users. If we allowed such users to add users, they
         # could create superusers, which would mean they would essentially have
@@ -143,7 +143,9 @@ class ExhibitAdmin(admin.ModelAdmin):
         return super().add_view(request, form_url, extra_context)
 
     @sensitive_post_parameters_m
-    def exhibit_change_password(self, request, id, form_url=""):  # noqa: A002
+    def exhibit_change_password(
+        self, request, id, form_url=""
+    ):  # type: ignore # noqa: A002
         exhibit = Exhibit.objects.filter(pk=id).first()
         if not self.has_change_permission(request, exhibit):
             raise PermissionDenied
@@ -208,7 +210,7 @@ class ExhibitAdmin(admin.ModelAdmin):
             context,
         )
 
-    def response_add(self, request, obj, post_url_continue=None):
+    def response_add(self, request, obj, post_url_continue=None):  # type: ignore
         """Determine the HttpResponse for the add_view stage.
 
         It mostly defers to its superclass implementation but is

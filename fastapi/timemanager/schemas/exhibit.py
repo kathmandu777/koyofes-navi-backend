@@ -1,5 +1,8 @@
 from pydantic import BaseModel, Field
-from timemanager.models import Exhibit
+
+from ..models import Exhibit
+from .place import ReadPlaceSchema
+from .waiting_time import ReadWaitingTimeSchema
 
 
 class UpdateExhibitSchema(BaseModel):
@@ -13,7 +16,9 @@ class UpdateExhibitSchema(BaseModel):
 
 class ReadExhibitSchema(BaseModel):
     name: str
-    description: str
+    description: str = ""
+    places: list[ReadPlaceSchema] = []
+    latest_waiting_time: ReadWaitingTimeSchema | None = None
 
     class Config:
         orm_mode = True

@@ -10,50 +10,63 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-envstate = os.getenv("ENV_STATE", "production")
-if envstate == "production":
+"""
+Settings
+"""
+env_state = os.getenv("ENV_STATE", "production")
+if env_state == "production":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
-elif envstate == "staging":
+elif env_state == "staging":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.staging")
 else:
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
 
-application = get_asgi_application()
-
-
 """
-FastAPI settings
+Logging
 """
 import logging
 import logging.config
 from datetime import datetime
 
 from pytz import timezone
-from starlette.middleware.authentication import AuthenticationMiddleware
-from timemanager.middlewares.auth import BackendAuth
-from timemanager.routers import auth_router, exhibit_router
-
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 
 from .log import LOGGING
 
-fastapp = FastAPI()
 
-
-def tokyo_time(*args):
+def tokyo_time():  # type: ignore
     return datetime.now(timezone("Asia/Tokyo")).timetuple()
 
 
 logging.Formatter.converter = tokyo_time
 logging.config.dictConfig(LOGGING)
 
+
+"""
+Django settings
+"""
+application = get_asgi_application()
+
+
+"""
+Fast API settings
+"""
+from starlette.middleware.authentication import AuthenticationMiddleware
+from timemanager.middlewares.auth import BackendAuth
+from timemanager.routers import auth_router, exhibit_router, waiting_time_router
+
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
+fastapp = FastAPI()
+
 # middlewares (後に追加したものが先に実行される)
 fastapp.add_middleware(AuthenticationMiddleware, backend=BackendAuth())
 
-fastapp.include_router(exhibit_router, tags=["exhibits"], prefix="/exhibit")
+# routers
+fastapp.include_router(exhibit_router, tags=["展示"], prefix="/exhibit")
 fastapp.include_router(auth_router, tags=["auth"], prefix="/auth")
+fastapp.include_router(waiting_time_router, tags=["待ち時間"], prefix="/waiting_time")
 
 # to mount Django
 fastapp.mount("/django", application)

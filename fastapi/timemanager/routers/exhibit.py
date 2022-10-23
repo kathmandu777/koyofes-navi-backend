@@ -1,18 +1,16 @@
-from timemanager.api import ExhibitAPI
-from timemanager.dependencies.auth import login_required
-from timemanager.models import Exhibit
-from timemanager.schemas import ReadExhibitSchema, UpdateExhibitSchema
-
 from fastapi import APIRouter, Depends, Request
+
+from ..api import ExhibitAPI
+from ..dependencies.auth import login_required
+from ..models import Exhibit
+from ..schemas import ReadExhibitSchema, UpdateExhibitSchema
 
 exhibit_router = APIRouter()
 
 
-@exhibit_router.get(
-    "/", response_model=ReadExhibitSchema, dependencies=[Depends(login_required)]
-)
-async def get(request: Request) -> Exhibit:
-    return ExhibitAPI.get(request)
+@exhibit_router.get("/", response_model=list[ReadExhibitSchema])
+async def get(request: Request) -> list[Exhibit]:
+    return ExhibitAPI.gets(request)
 
 
 @exhibit_router.put(
