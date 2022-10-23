@@ -24,3 +24,47 @@ commitする前に実行するコマンドを定義するツールです。`.pre
 
 1. <https://pre-commit.com/#installation>
 1. `pre-commit install`
+
+### Installation
+
+1. Clone this repository
+
+   ```sh
+    git clone https://github.com/kathmandu777/koyofes-navi-backend.git
+    ```
+
+1. Build
+
+    ```sh
+    docker-compose build
+    ```
+
+1. Setup Static Files
+
+    ```sh
+    docker-compose run fastapi poetry run python manage.py collectstatic --noinput
+    ```
+
+1. Migrate
+
+    ```sh
+    docker-compose run fastapi poetry run python manage.py migrate
+    ```
+
+1. Create Super User for Admin Page
+
+    ```sh
+    docker-compose run fastapi poetry run python manage.py createsuperuser
+    ```
+
+## Usage
+
+```sh
+docker-compose up
+```
+
+### alias for frequently used commands
+
+```sh
+source alias.sh
+```
