@@ -1,7 +1,8 @@
+from config.dependencies.auth import login_required
+
 from fastapi import APIRouter, Depends, Request
 
 from ..api import ExhibitAPI
-from ..dependencies.auth import login_required
 from ..models import Exhibit
 from ..schemas import ReadExhibitSchema, UpdateExhibitSchema
 

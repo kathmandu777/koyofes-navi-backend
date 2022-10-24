@@ -1,0 +1,1 @@
+from .prize import Prize

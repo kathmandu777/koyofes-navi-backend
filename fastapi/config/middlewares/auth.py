@@ -2,11 +2,10 @@ from config.auth import AuthenticatedExhibit, UnauthenticatedExhibit
 from config.jwt import decode_jwt_token
 from jose import jwt
 from starlette.middleware.authentication import AuthCredentials, AuthenticationBackend
+from timemanager.models import Exhibit
 
 from fastapi import HTTPException, Request
 from fastapi.security.utils import get_authorization_scheme_param
-
-from ..models import Exhibit
 
 
 class BackendAuth(AuthenticationBackend):

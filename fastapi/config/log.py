@@ -75,5 +75,9 @@ LOGGING = {
             "handlers": ["file"],
             "level": LOG_LOGGER_LEVEL,
         },
+        "bingo": {
+            "handlers": ["file"],
+            "level": LOG_LOGGER_LEVEL,
+        },
     },
 }

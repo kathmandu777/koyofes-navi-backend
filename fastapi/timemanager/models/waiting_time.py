@@ -1,7 +1,6 @@
+from config.models.base import BaseModelMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
-from .base import BaseModelMixin
 
 
 class WaitingTimeType(models.TextChoices):
