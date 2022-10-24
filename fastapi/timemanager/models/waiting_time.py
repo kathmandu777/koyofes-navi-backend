@@ -4,6 +4,16 @@ from django.utils.translation import gettext_lazy as _
 from .base import BaseModelMixin
 
 
+class WaitingTimeType(models.TextChoices):
+    """
+    NAME = Value, Label
+    """
+
+    IMMEDIATE = "IMMEDIATE", _("待ち時間なし")
+    WAITING = "WAITING", _("待ち時間あり")
+    RESERVATION = "RESERVATION", _("予約制")
+
+
 class WaitingTime(BaseModelMixin):
     exhibit = models.ForeignKey(
         "Exhibit",
@@ -11,5 +21,9 @@ class WaitingTime(BaseModelMixin):
         related_name="waiting_times",
     )
 
-    # type = models... # FIXME: implement this
-    minutes = models.IntegerField(_("minutes"))
+    type = models.CharField(
+        choices=WaitingTimeType.choices,
+        max_length=20,
+        default=WaitingTimeType.WAITING,
+    )
+    minutes = models.IntegerField(_("minutes"), default=None, blank=True, null=True)

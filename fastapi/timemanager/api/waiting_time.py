@@ -12,6 +12,8 @@ class WaitingTimeAPI:
     @classmethod
     def create(cls, request: Request, schema: CreateWaitingTimeSchema) -> WaitingTime:
         waiting_time = WaitingTime.objects.create(
-            exhibit_id=request.user.exhibit.uuid, minutes=schema.minutes
+            exhibit_id=request.user.exhibit.uuid,
+            minutes=schema.minutes,
+            type=schema.type,
         )
         return waiting_time
