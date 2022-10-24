@@ -13,7 +13,7 @@ class ExhibitAPI:
     def gets(cls, request: Request) -> list[Exhibit]:
         """Gets all exhibits."""
         exhibits = []
-        for exhibit in Exhibit.objects.all():
+        for exhibit in Exhibit.objects.filter(is_staff=False):
             exhibit.latest_waiting_time = (
                 WaitingTime.objects.filter(exhibit=exhibit)
                 .order_by("-created_at")
