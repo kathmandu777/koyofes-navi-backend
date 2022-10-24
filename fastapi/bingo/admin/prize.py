@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.shortcuts import redirect
 from django.urls import path, reverse
 from django.utils.html import format_html
@@ -77,6 +77,9 @@ class PrizeAdmin(admin.ModelAdmin):
 
     def minus_count(self, request, uuid):
         prize = Prize.objects.get(uuid=uuid)
-        prize.count -= 1
-        prize.save()
+        if prize.count > 0:
+            prize.count -= 1
+            prize.save()
+        else:
+            messages.error(request, "Count must be greater than 0.")
         return redirect(reverse("admin:bingo_prize_changelist"))
