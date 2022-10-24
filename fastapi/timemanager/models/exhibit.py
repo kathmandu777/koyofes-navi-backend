@@ -52,6 +52,12 @@ class Exhibit(AbstractBaseUser, PermissionsMixin, BaseModelMixin):
         max_length=MAX_LENGTH_USERNAME,
         unique=True,
     )
+    image = models.ImageField(
+        _("image"),
+        upload_to="exhibits",
+        blank=True,
+        null=True,
+    )
     password = models.CharField(_("password"), max_length=1024)
 
     MAX_LENGTH_DESCRIPTION = 200

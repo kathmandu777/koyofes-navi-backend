@@ -16,6 +16,7 @@ from django.template.response import TemplateResponse
 from django.urls import path, reverse
 from django.utils.decorators import method_decorator
 from django.utils.html import escape
+from django.utils.safestring import mark_safe
 from django.utils.translation import gettext
 from django.utils.translation import gettext_lazy as _
 from django.views.decorators.csrf import csrf_protect
@@ -41,6 +42,7 @@ class ExhibitAdmin(admin.ModelAdmin):
                     "name",
                     "password",
                     "description",
+                    "image",
                 )
             },
         ),
@@ -67,7 +69,7 @@ class ExhibitAdmin(admin.ModelAdmin):
     form = UserChangeForm
     add_form = UserCreationForm
     change_password_form = AdminPasswordChangeForm
-    list_display = ("name", "last_login", "description")
+    list_display = ("name", "last_login", "description", "preview")
     list_filter = (
         "is_staff",
         "is_superuser",
@@ -81,6 +83,17 @@ class ExhibitAdmin(admin.ModelAdmin):
     )
     readonly_fields = ("created_at", "uuid")
 
+    # Preview
+    def preview(self, instance):
+        style = "width:5rem; height:auto;"
+        tag = '<a href="{}"><img src="{}" style="{}"/></a>'
+        if instance.image and hasattr(instance.image, "url"):
+            return mark_safe(tag.format(instance.image.url, instance.image.url, style))
+        return None
+
+    preview.short_description = "preview"
+
+    # User Model
     def get_fieldsets(self, request, obj=None):  # type: ignore
         if not obj:
             return self.add_fieldsets
