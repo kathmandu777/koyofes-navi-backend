@@ -16,6 +16,7 @@ class UpdateExhibitSchema(BaseModel):
 
 class ReadExhibitSchema(BaseModel):
     name: str
+    image_url: str | None
     description: str = ""
     places: list[ReadPlaceSchema] = []
     latest_waiting_time: ReadWaitingTimeSchema | None = None

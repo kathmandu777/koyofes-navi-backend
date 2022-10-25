@@ -13,15 +13,23 @@ class ExhibitAPI:
     def gets(cls, request: Request) -> list[Exhibit]:
         """Gets all exhibits."""
         exhibits = []
-        for exhibit in Exhibit.objects.all():
+        for exhibit in Exhibit.objects.filter(is_staff=False):
             exhibit.latest_waiting_time = (
                 WaitingTime.objects.filter(exhibit=exhibit)
                 .order_by("-created_at")
                 .first()
             )
-            exhibit.places = list(exhibit.place_set.all())
+
+            places = []
+            for place in exhibit.place_set.all():
+                place.image = "/media/map/" + place.image  # FIXME: hard coding
+                places.append(place)
+            exhibit.places = places
+
+            exhibit.image_url = (
+                exhibit.image.url if exhibit.image else None
+            )  # FIXME: pydanticをスマートに使用して解消したい
             exhibits.append(exhibit)
-            logger.debug(f"Exhibit: {vars(exhibit)}")
         return exhibits
 
     @classmethod

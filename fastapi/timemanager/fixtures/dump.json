@@ -1,0 +1,471 @@
+[
+  {
+    "fields": {
+      "created_at": "2022-10-23T10:41:33.982Z",
+      "description": "string",
+      "groups": [],
+      "image": "",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": true,
+      "is_superuser": true,
+      "last_login": "2022-10-23T10:42:38.215Z",
+      "name": "admin",
+      "password": "pbkdf2_sha256$390000$5D4IDFC5EsqOqtrA8V2A1U$Ufzy9LbTFyHDNiTqztcpHjR8QZOxGylOQgjlMoJ0a3w=",
+      "updated_at": "2022-10-23T16:23:53.393Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "0ed18679-f7cf-48d4-9cbe-219f010bd1f3"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:14:11.164Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u7f8e\u8853\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u7f8e\u8853\u90e8",
+      "password": "pbkdf2_sha256$390000$fpF5OXawOoZrNvpVCCF75d$6T2TzcC3zShidWZ8BjfXF3eAyc8DYmPXCmUQKzau9gA=",
+      "updated_at": "2022-10-24T16:14:16.302Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "24795263-c111-489b-a5d2-7bb64e9cb85d"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:11:33.915Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/4A.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "4A",
+      "password": "pbkdf2_sha256$390000$HfyqWn6oZQqj64uAykZweR$ICS3qxgK/EXaYdNZV1/xKc9CAkAyH7cQgcg9dvNdRgg=",
+      "updated_at": "2022-10-24T16:11:46.251Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "317ad897-95c2-40d8-afca-5ac4dee5a30a"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:13:53.502Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u30a2\u30fc\u30c8\u30af\u30ea\u30a8\u30a4\u30c8\u540c\u597d\u4f1a.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u30a2\u30fc\u30c8\u30af\u30ea\u30a8\u30a4\u30c8\u540c\u597d\u4f1a",
+      "password": "pbkdf2_sha256$390000$ULnFFx9ReSKVmGwDewpTx6$9s3JlhZsykHergJEs1pIsIfgMUeXhCxBog4tHfh2PeY=",
+      "updated_at": "2022-10-24T16:14:00.643Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "36561da5-525a-4caf-bb5e-adc22249cfe3"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:09:53.282Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/2A.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "2A",
+      "password": "pbkdf2_sha256$390000$bGX4KTGneI06K0GRLu3Y5z$e1zGBuTuaQpQkCdhaCoioo1kNjrA6EnWK0Un2PXoDiw=",
+      "updated_at": "2022-10-24T16:10:00.485Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "44dc9ed4-d9c2-4240-a4d2-2fbf0e8a64b8"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:12:48.154Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u5199\u771f\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u5199\u771f\u90e8",
+      "password": "pbkdf2_sha256$390000$Wfuz24xWk4OaPUr4mqciyp$M+Acwaof40phweu7AJNyhTA7ljCvJaU7L61IJd9PW34=",
+      "updated_at": "2022-10-24T16:12:53.085Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "5bf2e0ef-9d86-4062-a8ae-6e1c0568595b"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T15:59:51.660Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/2M.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "2M",
+      "password": "pbkdf2_sha256$390000$WSWRWwubaQFpLLkKcx529b$71zM1cv1xXOtzRtclALbP4LtBfLQ/GiWVuyN36xY+Rs=",
+      "updated_at": "2022-10-24T16:09:13.056Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "5c186b8c-8996-473b-8f86-da4da1fd2bd3"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:10:53.319Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/4I.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "4I",
+      "password": "pbkdf2_sha256$390000$ip4SJgGSPSrnjZIztNjJAX$BD8ejR7NuncCci4RGjOLD61PD9TBC/yIIXyFxhtxOiw=",
+      "updated_at": "2022-10-24T16:11:01.361Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "5df290aa-3426-457f-bcb2-2b75b0887a3b"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:13:03.101Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u5439\u594f\u697d\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u5439\u594f\u697d\u90e8",
+      "password": "pbkdf2_sha256$390000$JnagkVsUaCbvs50XQhFqzZ$idiRJq2Ekqa4QswtVnbv94EhM+CTRwfuI3vLccoRi5o=",
+      "updated_at": "2022-10-24T16:13:15.181Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "668f2698-e7c1-47f8-9392-a4158ebca541"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:15:49.153Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u30ed\u30db\u30b3\u30f3B.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u30ed\u30dc\u30b3\u30f3B",
+      "password": "pbkdf2_sha256$390000$ycCtvYR9LPAS7cYXqraXCj$D2HjBbZeZf5TOstWy9yjEG3OLlBAosj0DiX6Wf2br1I=",
+      "updated_at": "2022-10-24T16:16:02.423Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "670e2b2d-9a73-4e1d-8bde-00962062a236"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:00:10.966Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/2E.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "2E",
+      "password": "pbkdf2_sha256$390000$xDqFMyz6zFLWM63KyuM5yF$pZjbwzXsGGqCitzip15NVq79WsEhoZqYTNtDBmX2BKo=",
+      "updated_at": "2022-10-24T16:09:05.817Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "6cdff0cf-ccfa-4d29-a76e-2968fb217afb"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:16:42.301Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u30b3\u30f3\u30d2\u30e5\u30fc\u30bf\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u30b3\u30f3\u30d4\u30e5\u30fc\u30bf\u90e8",
+      "password": "pbkdf2_sha256$390000$VSJ7LV4uKzhJQ8TN4Fn1Jj$J0pPPOU24O0tHnmaup8e3pl6ScgJg//DkUOXRzdf2vA=",
+      "updated_at": "2022-10-24T16:16:49.169Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "730c1d90-f6e1-4941-b188-dbc02e01add8"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:11:13.136Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/4C.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "4C",
+      "password": "pbkdf2_sha256$390000$2OecUgC2ROh4BYKHA6WSgX$Z0h4UFhq0bcjoPJKyxGV46HZI9uI6W3kiDj2350WQs8=",
+      "updated_at": "2022-10-24T16:11:20.397Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "752bd58c-cf7e-4a92-b1bd-53d33c142942"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:09:35.815Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/2C.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "2C",
+      "password": "pbkdf2_sha256$390000$y3Pl4oOhhhjtN2tim2eEDI$drLl5PeKVToKYFArE7g9eU2lU9MjU8nGYKdrMtwGTjo=",
+      "updated_at": "2022-10-24T16:09:41.834Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "83fea270-69fc-40e7-ad35-78e9b448ce9d"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:00:22.496Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/2I.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "2I",
+      "password": "pbkdf2_sha256$390000$qpKyoovWOJh4pZEemPJOxV$0P92z8gQCR/eYdZ/g18LCLLtoJGVeYnNNxXlERz96yM=",
+      "updated_at": "2022-10-24T16:08:28.696Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "90bbf847-355a-4249-827d-a6548e722143"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:10:34.424Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/4E.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "4E",
+      "password": "pbkdf2_sha256$390000$hsKM03UeiSsfe4aywKW9qi$A6kvRR99AJn9DfQHQFnPaMAJYOmL8EKCCQRKnpu3Cw0=",
+      "updated_at": "2022-10-24T16:10:41.538Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "a9409ae1-9c80-45ce-85bf-7e585c15a041"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:10:16.359Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/4M.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "4M",
+      "password": "pbkdf2_sha256$390000$PxALIhOUvruTKuAh2yJg3p$cNoA2LTAEK8LNKrUqfl97GBGS8CY/a4s6gjI8MLaWF0=",
+      "updated_at": "2022-10-24T16:10:25.441Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "b01f9cfd-ce67-47ac-86f8-3ad9f6d49e14"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:11:57.313Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/3A.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "3A",
+      "password": "pbkdf2_sha256$390000$QwkpykpKt08UneKDKD1KP9$0ssGx/vE7f7Tur5VMfkj1ZalnKNv6P3tsny/nrS4fjA=",
+      "updated_at": "2022-10-24T16:12:03.540Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "c1cf8d8a-e3c3-4065-a3d2-3122de06dfa1"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:13:29.215Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u8efd\u97f3\u697d\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u8efd\u97f3\u697d\u90e8",
+      "password": "pbkdf2_sha256$390000$Yp7FK7o74yKCk3TGJOaFZl$rMXi82lA1iBQYEaT/FOppMnwQ4uOipGk28DCz1pHifg=",
+      "updated_at": "2022-10-24T16:13:33.959Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "c562ad06-78fc-49bc-bae1-8f6b91ffcc8d"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:18:22.794Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u56f2\u7881\u5c06\u68cb\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u56f2\u7881\u5c06\u68cb\u90e8",
+      "password": "pbkdf2_sha256$390000$LaGEirHD1wvyh6Tt8Y7OhQ$sx+HJs9eqC4KQADcFFuQC3eZ8FQ1IoMtFd2PeyWav5s=",
+      "updated_at": "2022-10-24T16:18:32.725Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "ccda434e-770e-4126-b1cf-0d81165f3487"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:14:38.078Z",
+      "description": "",
+      "groups": [],
+      "image": "",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u7dcf\u5408\u822a\u7a7a\u6280\u8853\u7814\u7a76\u4f1a",
+      "password": "pbkdf2_sha256$390000$r0dgqKmHiwuElPzuwaX0pY$PqTwBmgtnPYBtizw9emQFmd9a6xO18PPTRF0M5r3enk=",
+      "updated_at": "2022-10-24T16:14:51.930Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "d481f24c-27f3-45e4-93b6-34ee0ddc8b2f"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:16:14.404Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u8336\u9053\u90e8.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u8336\u9053\u90e8",
+      "password": "pbkdf2_sha256$390000$C9T0hxKS91344rvpdJKnIt$fhj47+hkQjye9zQdZ6wK7IBD/1EvVncGEzSphDKTI24=",
+      "updated_at": "2022-10-24T16:16:20.127Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "db0643f9-8ebb-43ae-af87-2296caf4151e"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:15:07.149Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u9244\u9053\u822a\u7a7a\u7814\u7a76\u540c\u597d\u4f1a.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u9244\u9053\u822a\u7a7a\u7814\u7a76\u540c\u597d\u4f1a",
+      "password": "pbkdf2_sha256$390000$w8nL6DIOKCd3IT8nzPKjbb$Tiq7lZJHBEddBBLn3STz7EaPusnyf3pqNL35TLk2p3o=",
+      "updated_at": "2022-10-24T16:15:30.142Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "eaa12b94-77dc-4fe1-a928-7934195b67c9"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:12:26.646Z",
+      "description": "",
+      "groups": [],
+      "image": "exhibits/\u5929\u6587\u540c\u597d\u4f1a.jpg",
+      "is_active": true,
+      "is_admin": false,
+      "is_staff": false,
+      "is_superuser": false,
+      "last_login": null,
+      "name": "\u5929\u6587\u540c\u597d\u4f1a",
+      "password": "pbkdf2_sha256$390000$hbPb4MdnJbU76u4KgjY0dQ$w4H9SYsMiBpbnbQC9g/VQXggUjXmqslQbcsAEIIgpJw=",
+      "updated_at": "2022-10-24T16:12:35.532Z",
+      "user_permissions": []
+    },
+    "model": "timemanager.exhibit",
+    "pk": "f9ba800d-bc44-4f77-b819-501aa6172aca"
+  },
+  {
+    "fields": {
+      "created_at": "2022-10-24T16:28:21.636Z",
+      "exhibit": "5c186b8c-8996-473b-8f86-da4da1fd2bd3",
+      "image": "2F.png",
+      "name": "122\u8b1b\u7fa9\u5ba4",
+      "position_x": 0.0,
+      "position_y": 0.0,
+      "updated_at": "2022-10-24T16:35:16.728Z"
+    },
+    "model": "timemanager.place",
+    "pk": "fc2916c7-6aa6-48a5-872b-20ccd0abc00a"
+  }
+]
