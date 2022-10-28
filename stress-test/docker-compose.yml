@@ -1,0 +1,17 @@
+version: "3"
+
+x-common: &common
+  image: locustio/locust
+  volumes:
+    - ./locustfiles:/src
+
+services:
+  locust-master:
+    <<: *common
+    ports:
+      - 8089:8089
+    command: -f /src --master -H ${TARGET_HOST}
+
+  locust-slave:
+    <<: *common
+    command: -f /src --worker --master-host locust-master
