@@ -57,7 +57,6 @@ from starlette.middleware.authentication import AuthenticationMiddleware
 from timemanager.routers import auth_router, exhibit_router, waiting_time_router
 
 from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
 
 fastapp = FastAPI()
 
@@ -71,6 +70,6 @@ fastapp.include_router(waiting_time_router, tags=["待ち時間"], prefix="/wait
 fastapp.include_router(prize_router, tags=["BINGO景品"], prefix="/prize")
 
 # to mount Django
-fastapp.mount("/django", application)
-fastapp.mount("/static", StaticFiles(directory="static"), name="static")
-fastapp.mount("/media", StaticFiles(directory="media"), name="media")
+# fastapp.mount("/django", application)
+# fastapp.mount("/static", StaticFiles(directory="static"), name="static")
+# fastapp.mount("/media", StaticFiles(directory="media"), name="media")
