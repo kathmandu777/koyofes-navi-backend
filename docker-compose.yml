@@ -14,7 +14,6 @@ services:
       DB_PASSWORD: fastapi
       DB_HOST: postgres
       DB_PORT: 5432
-      ENV_STATE: local
     env_file:
       - fastapi/fastapi.env
     links:

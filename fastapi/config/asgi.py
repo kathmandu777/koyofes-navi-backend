@@ -54,17 +54,37 @@ Fast API settings
 from bingo.routers import prize_router
 from config.middlewares.auth import BackendAuth
 from starlette.middleware.authentication import AuthenticationMiddleware
-from timemanager.routers import auth_router, exhibit_router, waiting_time_router
+from timemanager.routers import (
+    auth_router,
+    exhibit_router,
+    exhibits_router,
+    waiting_time_router,
+)
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 fastapp = FastAPI()
 
 # middlewares (後に追加したものが先に実行される)
 fastapp.add_middleware(AuthenticationMiddleware, backend=BackendAuth())
+fastapp.add_middleware(HTTPSRedirectMiddleware)
+fastapp.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost",
+        "http://localhost:3000",
+        "https://koyofes-navi.vercel.app",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # routers
 fastapp.include_router(exhibit_router, tags=["展示"], prefix="/exhibit")
+fastapp.include_router(exhibits_router, tags=["展示一覧"], prefix="/exhibits")
 fastapp.include_router(auth_router, tags=["auth"], prefix="/auth")
 fastapp.include_router(waiting_time_router, tags=["待ち時間"], prefix="/waiting-time")
 fastapp.include_router(prize_router, tags=["BINGO景品"], prefix="/prize")

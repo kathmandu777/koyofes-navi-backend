@@ -7,11 +7,19 @@ from ..models import Exhibit
 from ..schemas import ReadExhibitSchema, UpdateExhibitSchema
 
 exhibit_router = APIRouter()
+exhibits_router = APIRouter()
 
 
-@exhibit_router.get("/", response_model=list[ReadExhibitSchema])
-async def get(request: Request) -> list[Exhibit]:
+@exhibits_router.get("/", response_model=list[ReadExhibitSchema])
+async def gets(request: Request) -> list[Exhibit]:
     return ExhibitAPI.gets(request)
+
+
+@exhibit_router.get(
+    "/", response_model=list[ReadExhibitSchema], dependencies=[Depends(login_required)]
+)
+async def get(request: Request) -> Exhibit:
+    return ExhibitAPI.get(request)
 
 
 @exhibit_router.put(
