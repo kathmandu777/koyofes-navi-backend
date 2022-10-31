@@ -16,7 +16,7 @@ async def gets(request: Request) -> list[Exhibit]:
 
 
 @exhibit_router.get(
-    "/", response_model=list[ReadExhibitSchema], dependencies=[Depends(login_required)]
+    "/", response_model=ReadExhibitSchema, dependencies=[Depends(login_required)]
 )
 async def get(request: Request) -> Exhibit:
     return ExhibitAPI.get(request)
