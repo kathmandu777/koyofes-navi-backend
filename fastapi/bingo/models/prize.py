@@ -8,5 +8,8 @@ class Prize(BaseModelMixin):
     image = models.ImageField(upload_to="prizes", blank=True, null=True)
     count = models.IntegerField(default=0)
 
+    is_first_day = models.BooleanField(default=False, verbose_name="11/5")
+    is_second_day = models.BooleanField(default=False, verbose_name="11/6")
+
     def __str__(self):
         return self.name
