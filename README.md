@@ -4,6 +4,10 @@
 
 Koyofes Navi は、豊田工業高等専門学校で開催される文化祭「こうよう祭」における待ち時間管理システムです。
 
+<div align="center">
+    <img src="./res/4i.jpg" width="300px" style="border: 1px black solid" />
+</div>
+
 ## Getting Started
 
 ### Prerequisites
